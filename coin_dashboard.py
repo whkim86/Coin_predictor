@@ -272,7 +272,7 @@ ax.xaxis.set_major_formatter(date_format)
 ax.set_xticklabels(ax.get_xticks(), rotation=45, ha='right')
 ax.set_xlabel("date")
 ax.set_ylabel("low ~ high range")
-ax.set_title(f' 비트코인 , 6 day predict date:  {select_date} ')  # (f' 예측날짜:  {select_date} 9시 기준')
+ax.set_title(f' BTC Coin , 6 day predict date:  {select_date} ')  # (f' 예측날짜:  {select_date} 9시 기준')
 # plt.xticks([])  # Disable x-axis ticks
 # plt.yticks([])  # Disable y-axis ticks
 ax.grid(True)
