@@ -133,12 +133,6 @@ data4_2 = data3[ (data3['coin'] == 'BTC')  & (data3['예측일'] == select_date)
 data4_1CLx = data4_1[data4_1['variable'] == 'Pred1'][['date']]
 data4_1CLx = list(range(1, len(data4_1CLx.date)+1)) 
 
-# data4_1CLx = pd.to_datetime(data4_1CLx)
-
-
-# ax.plot(data4_1CLx[:(len(data4_1CLx) - 6)], (data4_1CLy.value_close[:(len(data4_1CLx) - 6)]), linestyle='-', marker='*', color='black', linewidth=2)
-# ax.plot(data4_1CLx[:(len(data4_1CLy0.value_close))], (data4_1CLy0.value_close), linestyle='-', marker='*', color='black', linewidth=2)
-
 data4_1CLy0 = data4_1[data4_1['variable'] == 'Pred0'][['value_close']]
 
 data4_1CLy = data4_1[data4_1['variable'] == 'Pred1'][['value_close']]
@@ -198,17 +192,10 @@ data4_15Lwy = data4_1[data4_1['variable'] == 'Pred52'][['value_low']] #
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-# st.header("Single Select Coin Data")
-st.markdown(f'### 4. 코인차트 , 예측날짜:  {select_date} 기준')
-st.markdown(f'###### {formatted_date} 기준, 6일 전 데이터까지만 시각화 조회가능')
+st.markdown(f'######     ')
+st.markdown(f'#### 🧠 예측 시각화 차트 (D-6 조회가능)')
+st.markdown(f'######     ')
 
-
-# close_up = data4_2['close_up'].values
-# high_up = data4_2['high_up'].values
-# low_up = data4_2['low_up'].values
-
-# data4_2.close_up, data4_2.high_up, data4_2.low_up
-# st.markdown(f'#### {select_coin} , 6 day predict date:  {select_date} {close_up, high_up, low_up}')
 
 data4_2.index = [''] * len(data4_2)
 st.write(data4_2)
@@ -285,7 +272,7 @@ ax.xaxis.set_major_formatter(date_format)
 ax.set_xticklabels(ax.get_xticks(), rotation=45, ha='right')
 ax.set_xlabel("date")
 ax.set_ylabel("low ~ high range")
-ax.set_title(f'{select_coin} , 6 day predict date:  {select_date} ')  # (f' 예측날짜:  {select_date} 9시 기준')
+ax.set_title(f' 비트코인 , 6 day predict date:  {select_date} ')  # (f' 예측날짜:  {select_date} 9시 기준')
 # plt.xticks([])  # Disable x-axis ticks
 # plt.yticks([])  # Disable y-axis ticks
 ax.grid(True)
