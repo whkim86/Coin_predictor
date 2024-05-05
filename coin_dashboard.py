@@ -21,26 +21,26 @@ import time
 
 
 ## 보이기 
-hide_streamlit_style = """
-            <style>
-            MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            GithubIcon {visibility: hidden;}
-            #header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-
-## 숨기기 
 # hide_streamlit_style = """
 #             <style>
 #             MainMenu {visibility: hidden;}
-#             #footer {visibility: hidden;}
+#             footer {visibility: hidden;}
 #             GithubIcon {visibility: hidden;}
-#             header {visibility: hidden;}
+#             #header {visibility: hidden;}
 #             </style>
 #             """
 # st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
+# 숨기기 
+hide_streamlit_style = """
+            <style>
+            MainMenu {visibility: hidden;}
+            #footer {visibility: hidden;}
+            GithubIcon {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 
 # 현재 날짜 가져오기
