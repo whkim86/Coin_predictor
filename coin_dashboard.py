@@ -198,7 +198,7 @@ data4_15Lwy = data4_1[data4_1['variable'] == 'Pred52'][['value_low']] #
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.markdown(f'######     ')
-st.markdown(f'#### 🧠 예측 시각화 차트 (D-6 조회가능)')
+st.markdown(f'#### 🧠 예측 시각화 차트 (D-4 조회가능)')
 st.markdown(f'######     ')
 
 
