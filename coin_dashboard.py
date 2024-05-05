@@ -50,7 +50,7 @@ formatted_date = today.strftime("%Y-%m-%d")
 
 
 st.title("비트코인 일(Day)예측 대시보드")
-st.markdown(f'### [비트코인, 오늘 날짜: {formatted_date} 👈 9시 기준 예측결과 업데이트] ')
+st.markdown(f'#### [비트코인, {formatted_date} 👈 예측결과 ] ')
 
 
 st.sidebar.title("Coin Chart")
@@ -94,11 +94,11 @@ st.markdown(f'##### 👋 익일 종가 상승확률 : {a}  ')
 st.markdown(f'##### 👋 익일 고점 상승확률 : {b}  ')
 st.markdown(f'##### 👋 익일 저점 상승확률 : {c}  ')
 
-st.markdown(f'##### ※ 상승확률 100 ~ 77% 인 경우 상승가능성 매우 높음')
-st.markdown(f'##### ※ 상승확률 76 ~ 59% 인 경우 상승가능성 높음  ')
-st.markdown(f'##### ※ 상승확률 58 ~ 40% 인 경우 중립  ')
-st.markdown(f'##### ※ 상승확률 39 ~ 21% 인 경우 하락가능성 높음  ')
-st.markdown(f'##### ※ 상승확률 20 ~ 0% 이상인 경우 하락가능성 매우 높음  ')
+st.markdown(f'####### ※ 상승확률 100 ~ 77% 인 경우 상승가능성 매우 높음')
+st.markdown(f'####### ※ 상승확률 76 ~ 59% 인 경우 상승가능성 높음  ')
+st.markdown(f'####### ※ 상승확률 58 ~ 40% 인 경우 중립  ')
+st.markdown(f'####### ※ 상승확률 39 ~ 21% 인 경우 하락가능성 높음  ')
+st.markdown(f'####### ※ 상승확률 20 ~ 0% 이상인 경우 하락가능성 매우 높음  ')
 
 
 # 
