@@ -88,9 +88,9 @@ st.markdown(f'#### 💻 비트코인 예측일 :  {select_date} 👈 9시 기준
 data3_1 = data3[ (data3['coin'] == 'BTC')  & (data3['예측일']==select_date)  &  (data3['SEQ'] == 1)]
 
 
-st.markdown(f'##### 👋 익일 종가 상승확률 : {data3_1['종가상승확률']}  ')
-st.markdown(f'##### 👋 익일 고점 상승확률 : {data3_1['고점갱신확률']}  ')
-st.markdown(f'##### 👋 익일 저점 상승확률 : {data3_1['저점상승확률']}  ')
+st.markdown(f'##### 👋 익일 종가 상승확률 : {data3_1['종가상승확률'].unique()}  ')
+st.markdown(f'##### 👋 익일 고점 상승확률 : {data3_1['고점갱신확률'].unique()}  ')
+st.markdown(f'##### 👋 익일 저점 상승확률 : {data3_1['저점상승확률'].unique()}  ')
 
 st.markdown(f'##### ※ 상승확률 100 ~ 77% 인 경우 상승가능성 매우 높음')
 st.markdown(f'##### ※ 상승확률 76 ~ 59% 인 경우 상승가능성 높음  ')
