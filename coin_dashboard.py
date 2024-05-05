@@ -83,9 +83,10 @@ data = pd.read_csv(data_url)
 data3 = data[data['GRP'] == 'Set3'][['pred_day', 'coin', 'SEQ', 'date', 'close_up', 'high_up', 'low_up' ]].dropna()
 
 
-st.markdown(f'###### 아래 필터인 예측수행일은 모델이 결과를 도출한 날짜를 의미함    ')
-st.markdown(f'###### 예를들어, 05-05 Day 상승/하락이 궁금하다면 05-04 Day 를 선택하면 됨   ')
-
+st.markdown(f'######     ')
+st.markdown(f'###### ▶ 아래 필터 사용법 : 예측수행일은 모델이 결과를 도출한 날짜를 의미함    ')
+st.markdown(f'######    예를들어, 05-05 Day 상승/하락이 궁금하다면 05-04 Day 를 선택하면 됨   ')
+st.markdown(f'######     ')
 select_date = st.selectbox(
     '💡 예측수행일 선택하세요 ',
     data3['pred_day'].sort_values(ascending=False).unique()
