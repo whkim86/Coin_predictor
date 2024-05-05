@@ -52,6 +52,16 @@ formatted_date = today.strftime("%Y-%m-%d")
 st.title("비트코인 일(Day)예측 대시보드")
 st.markdown(f'#### [비트코인, {formatted_date} 👈 예측결과 ] ')
 
+st.markdown(f'##### ※ 주의 사항  ')
+st.markdown(f'######  - 본 서비스는 정보제공 목적으로만 서비스를 제공하며 이용자에게 투자권유, 매매권유 및 제안 등을 일체 하지 않습니다.')
+st.markdown(f'######    따라서 투자/매매 등 모든 책임은 투자자(이용자) 본인에게 있으며 본 서비스 제공자는 아무 관련(책임)이 없습니다.')
+
+st.markdown(f'######  - 과거 데이터를 기반으로 일별(Day) 상승/하락 확률을 예측하는 모형이며 예측결과가 100% 정확성을 보장하지 않습니다.')
+st.markdown(f'######    외부충격(예, 질병 코로나, 전쟁이슈 등)이 반영되지 않는 기술적 분석에 초점이 맞춰져 있는 예측모형입니다.')
+
+st.markdown(f'######    코인거래소 Upbit 기준 오전 9시 기준 예측 수행결과입니다.')
+
+
 
 st.sidebar.title("Coin Chart")
 st.sidebar.markdown('비트/알트코인 Link : [All Coin Symbols](https://upbit.com/exchange?code=CRIX.UPBIT.KRW-BTC)')
