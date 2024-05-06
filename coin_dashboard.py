@@ -77,11 +77,11 @@ st.sidebar.markdown('나스닥200 Link : [All Nasdaq200 Symbols](https://kr.inve
 
 
 # GitHub에서 Raw 형태의 데이터 URL
-data_url = 'https://raw.githubusercontent.com/whkim16/Coin_predictor/main/C%3A/Users/woohy/Desktop/predict_btc/PT_ALL/final_data/web/final_web_Day_v3.csv'
+data_url = 'https://raw.githubusercontent.com/whkim86/Coin_predictor/main/C%3A/Users/woohy/Desktop/predict_btc/PT_ALL/final_data/web/final_web_Day_v3.csv'
 # 데이터 불러오기
 data = pd.read_csv(data_url)
 data3 = data[data['GRP'] == 'Set3'][['pred_day', 'coin', 'SEQ', 'date', 'close_up', 'high_up', 'low_up' ]].dropna()
-
+data9 = data[data['GRP'] == 'Set9'][['pred_day', 'coin', 'MSG8', 'MSG9' ]].dropna()
 
 st.markdown(f'######     ')
 st.markdown(f'###### 👈 아래 필터 사용법 : 예측수행일은 모델이 결과를 도출한 날짜를 의미함    ')
@@ -104,10 +104,8 @@ data3 = data3.rename(columns={'low_up': '저점상승확률'})
 st.markdown(f'#### 💻 비트코인 예측일 :  {select_date} 👈 9시 기준, 예측결과 ')
 
 data3_1 = data3[ (data3['coin'] == 'BTC')  & (data3['예측일']==select_date)  &  (data3['SEQ'] == 1)]
-a = data3_1['종가상승확률'].unique()
-st.markdown(f'##### 👋 익일 종가 상승확률 : {a}  ')
 
-data9 = data[data['GRP'] == 'Set9'][['pred_day', 'coin', 'MSG8', 'MSG9' ]].dropna()
+
 data9 = data9.rename(columns={'pred_day': '예측일'})
 data9_1 = data9[ (data9['coin'] == 'BTC')  & (data9['예측일']==select_date) ]
 
