@@ -79,7 +79,7 @@ st.sidebar.markdown('나스닥200 Link : [All Nasdaq200 Symbols](https://kr.inve
 # GitHub에서 Raw 형태의 데이터 URL
 data_url = 'https://raw.githubusercontent.com/whkim16/Coin_predictor/main/C%3A/Users/woohy/Desktop/predict_btc/PT_ALL/final_data/web/final_web_Day_v3.csv'
 # 데이터 불러오기
-data = pd.read_csv(data_url)
+data = pd.read_csv(data_url, encoding='CP949')
 data3 = data[data['GRP'] == 'Set3'][['pred_day', 'coin', 'SEQ', 'date', 'close_up', 'high_up', 'low_up' ]].dropna()
 st.write(data3)
 data9 = data[data['GRP'] == 'Set9'][['pred_day', 'coin', 'MSG8', 'MSG9' ]]
