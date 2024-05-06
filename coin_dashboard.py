@@ -81,6 +81,7 @@ data_url = 'https://raw.githubusercontent.com/whkim86/Coin_predictor/main/C%3A/U
 # 데이터 불러오기
 data = pd.read_csv(data_url)
 data3 = data[data['GRP'] == 'Set3'][['pred_day', 'coin', 'SEQ', 'date', 'close_up', 'high_up', 'low_up' ]].dropna()
+data9 = data[data['GRP'] == 'Set9'][['pred_day', 'coin', 'MSG8', 'msg9' ]].dropna()
 
 st.markdown(f'######     ')
 st.markdown(f'###### 👈 아래 필터 사용법 : 예측수행일은 모델이 결과를 도출한 날짜를 의미함    ')
@@ -99,16 +100,14 @@ data3 = data3.rename(columns={'close_up': '종가상승확률'})
 data3 = data3.rename(columns={'high_up': '고점갱신확률'})
 data3 = data3.rename(columns={'low_up': '저점상승확률'})
 
+data9 = data9.rename(columns={'pred_day': '예측일'})
+
 # 💻 🧠 👋 👈
 st.markdown(f'#### 💻 비트코인 예측일 :  {select_date} 👈 9시 기준, 예측결과 ')
 
 data3_1 = data3[ (data3['coin'] == 'BTC')  & (data3['예측일']==select_date)  &  (data3['SEQ'] == 1)]
-a = data3_1['종가상승확률'].unique()
-st.markdown(f'##### 👋 익일 종가 상승확률 : {a}  ')
-
-data9 = data[data['GRP'] == 'Set9'][['pred_day', 'coin', 'msg8', 'msg9' ]].dropna()
-data9 = data9.rename(columns={'pred_day': '예측일'})
 data9_1 = data9[ (data9['coin'] == 'BTC')  & (data9['예측일']==select_date) ]
+
 
 a = data3_1['종가상승확률'].unique()
 b = data3_1['고점갱신확률'].unique()
