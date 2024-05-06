@@ -81,7 +81,7 @@ data_url = 'https://raw.githubusercontent.com/whkim86/Coin_predictor/main/C%3A/U
 # 데이터 불러오기
 data = pd.read_csv(data_url)
 data3 = data[data['GRP'] == 'Set3'][['pred_day', 'coin', 'SEQ', 'date', 'close_up', 'high_up', 'low_up' ]].dropna()
-st.write(data3.tail(1))
+st.write(data3)
 data9 = data[data['GRP'] == 'Set9'][['pred_day', 'coin', 'MSG8', 'MSG9' ]]
 st.write(data9.tail(1))
 
