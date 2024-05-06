@@ -106,8 +106,7 @@ data3_1 = data3[ (data3['coin'] == 'BTC')  & (data3['예측일']==select_date)  
 a = data3_1['종가상승확률'].unique()
 st.markdown(f'##### 👋 익일 종가 상승확률 : {a}  ')
 
-data9 = data[data['GRP'] == 'Set9'][['pred_day', 'coin', 'MSG8', 'MSG9' ]].dropna()
-
+data9 = data[data['GRP'] == 'Set9'][['pred_day', 'coin', 'msg8', 'msg9' ]].dropna()
 data9 = data9.rename(columns={'pred_day': '예측일'})
 data9_1 = data9[ (data9['coin'] == 'BTC')  & (data9['예측일']==select_date) ]
 
