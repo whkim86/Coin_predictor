@@ -81,9 +81,8 @@ data_url = 'https://raw.githubusercontent.com/whkim16/Coin_predictor/main/C%3A/U
 # 데이터 불러오기
 data = pd.read_csv(data_url, encoding='CP949')
 data3 = data[data['GRP'] == 'Set3'][['pred_day', 'coin', 'SEQ', 'date', 'close_up', 'high_up', 'low_up' ]].dropna()
-st.write(data3)
 data9 = data[data['GRP'] == 'Set9'][['pred_day', 'coin', 'MSG8', 'MSG9' ]]
-st.write(data9.tail(1))
+
 
 st.markdown(f'######     ')
 st.markdown(f'###### 👈 아래 필터 사용법 : 예측수행일은 모델이 결과를 도출한 날짜를 의미함    ')
@@ -124,7 +123,7 @@ st.markdown(f'##### 👋 익일 저점 상승확률 : {c}  ')
 
 
 
-st.markdown(f'##### ▷. {e} ')
+st.markdown(f'###### ▷. {e} ')
 
 st.markdown(f'######    ※ 💡 확률 수치 참고  ')
 # st.markdown(f'######    - 상승확률 100 ~ 77% 인 경우 상승가능성 매우 높음  ')
