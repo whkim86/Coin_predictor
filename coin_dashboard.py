@@ -107,7 +107,7 @@ data9 = data9.rename(columns={'pred_day': '예측일'})
 st.markdown(f'#### 💻 비트코인 예측일 :  {select_date} 👈 9시 기준, 예측결과 ')
 
 data3_1 = data3[ (data3['coin'] == 'BTC')  & (data3['예측일']==select_date)  &  (data3['SEQ'] == 1)]
-data9_1 = data3[ (data3['coin'] == 'BTC')  & (data3['예측일']==select_date) ]
+data9_1 = data3[ (data9['coin'] == 'BTC')  & (data9['예측일']==select_date) ]
 
 a = data3_1['종가상승확률'].unique()
 b = data3_1['고점갱신확률'].unique()
